@@ -7,7 +7,7 @@ import { ThemeProvider } from "../contexts/ThemeContext";
 import ThemeToggle from "../components/ThemeToggle";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import './globals.css'
+import "./globals.css";
 
 interface LayoutProps {
   children: ReactNode;
@@ -77,8 +77,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <body>
         <AuthProvider>
           <ThemeProvider>
-            <LayoutComponent>{children}</LayoutComponent>
-            <ToastContainer />
+            <div>
+              <ToastContainer />
+              <LayoutComponent>{children}</LayoutComponent>
+            </div>
           </ThemeProvider>
         </AuthProvider>
       </body>
