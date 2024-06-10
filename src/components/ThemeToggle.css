@@ -1,0 +1,69 @@
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  display: flex;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+.moon-icon {
+  font-size: 16px;
+  left: 8px;
+  bottom: 8px;
+  color: #f1c40f;
+}
+
+.sun-icon {
+  font-size: 16px;
+  right: 8px;
+  bottom: 8px;
+  color: #f39c12;
+}
